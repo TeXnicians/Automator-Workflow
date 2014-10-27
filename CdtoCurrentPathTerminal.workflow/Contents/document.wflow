@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>381</string>
+	<string>409</string>
 	<key>AMApplicationVersion</key>
-	<string>2.4</string>
+	<string>2.5</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "Finder"	try		set currentFolder to (folder of the front window)		set currentPath to (POSIX path of (target of the front window as alias))	on error		set currentFolder to desktop		set currentPath to (POSIX path of (desktop as alias))	end tryend telltell application "Terminal"	activate	tell application "System Events"		set cdtocurrentPath to "cd \"" &amp; currentPath &amp; "\"" as string		keystroke cdtocurrentPath		keystroke return	end tellend tell</string>
+					<string>tell application "Finder"	try		set currentFolder to (folder of the front window)		set currentPath to (POSIX path of (target of the front window as alias))	on error		set currentFolder to desktop		set currentPath to (POSIX path of (desktop as alias))	end tryend telltell application "Terminal"	activate	do script "cd \"" &amp; currentPath &amp; "\"" in window 1end tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -102,14 +102,12 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>440.500000:476.000000</string>
+				<string>447.000000:316.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
